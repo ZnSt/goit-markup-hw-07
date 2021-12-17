@@ -1,0 +1,22 @@
+// UNTILS
+@import "./utils.scss/variables";
+@import "./utils.scss/hidden";
+
+// BASE
+@import "./base.scss/common";
+@import "./base.scss/reset";
+
+// COMPONENT
+@import "./components.scss/container";
+@import "./components.scss/modal";
+
+// LAYOUT
+@import "./layout.scss/header";
+@import "./layout.scss/hero";
+@import "./layout.scss/benefits";
+@import "./layout.scss/work";
+@import "./layout.scss/team";
+@import "./layout.scss/clients";
+@import "./layout.scss/filter-button";
+@import "./layout.scss/gallery-portfolio";
+@import "./layout.scss/footer";

@@ -1,0 +1,230 @@
+/* Модальное окно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 40px;
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: var(--primary-white-color);
+
+  transition: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  cursor: pointer;
+
+  &:hover {
+    fill: var(--accent-color);
+  }
+
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__icon-close {
+  width: 11px;
+  height: 11px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Разметка фона модалки */
+
+.form-modal__item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 12px;
+
+  color: var(--primary-text-color);
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-modal__text {
+  font-family: Roboto;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 0.85;
+  letter-spacing: 0.01em;
+  display: inline-block;
+
+  color: var(--secondary-text-color);
+
+  margin-bottom: 4px;
+}
+.input__wrapper {
+  position: relative;
+}
+
+.form-modal__input {
+  width: 448px;
+  height: 40px;
+  padding-left: 30px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: var(--accent-color);
+    + {
+      .form-modal__icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+
+  &:focus {
+    border-color: var(--accent-color);
+    + {
+      .form-modal__icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+}
+
+.form-modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  margin-left: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.textarea__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-modal__textarea {
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+
+  &:hover {
+    border-color: var(--accent-color);
+  }
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.form-modal__textarea::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 0.85;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-modal__input-policy:checked + .form-modal__policy-form:after {
+  transform: translate(16px);
+}
+.form-modal__policy-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.form-modal__policy-form::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 50px;
+  margin-right: 5px;
+}
+.form-modal__policy-form::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  left: 3px;
+  top: 3px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal__link-policy {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.form-modal__btn {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  padding: 10px 55px;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2196f3;
+  }
+}
