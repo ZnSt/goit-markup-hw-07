@@ -1,22 +1,23 @@
 // UNTILS
-@import "./utils.scss/variables";
-@import "./utils.scss/hidden";
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./utils/hidden";
 
 // BASE
-@import "./base.scss/common";
-@import "./base.scss/reset";
+@import "./base/common";
+@import "./base/reset";
 
 // COMPONENT
-@import "./components.scss/container";
-@import "./components.scss/modal";
+@import "./components/container";
+@import "./components/modal";
 
 // LAYOUT
-@import "./layout.scss/header";
-@import "./layout.scss/hero";
-@import "./layout.scss/benefits";
-@import "./layout.scss/work";
-@import "./layout.scss/team";
-@import "./layout.scss/clients";
-@import "./layout.scss/filter-button";
-@import "./layout.scss/gallery-portfolio";
-@import "./layout.scss/footer";
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/benefits";
+@import "./layout/work";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/filter-button";
+@import "./layout/gallery-portfolio";
+@import "./layout/footer";
