@@ -3,13 +3,34 @@
 /* Кнопки */
 .filter-button {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+
+  @include mq(tablet-only) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 }
-.filter-button__item + .filter-button__item {
-  margin-left: 8px;
+.filter-button__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mq(tablet-only) {
+    margin-bottom: 30px;
+  }
 }
+
 .filter-button__item .link:hover,
 .filter-button__item.link:focus {
   color: var(--primary-white-color);

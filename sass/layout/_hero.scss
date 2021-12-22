@@ -22,14 +22,29 @@
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/overlay-section/overlay-sm.jpg);
 
+  @include mq(retina) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/overlay-section/overlay@2x-sm.jpg);
+  }
+
   @include mq(tablet) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/overlay-section/overlay-md.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/overlay-section/overlay@2x-md.jpg);
+    }
   }
 
   @include mq(desktop) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/overlay-section/overlay-lg.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/overlay-section/overlay@2x-lg.jpg);
+    }
   }
 }
 

@@ -1,0 +1,117 @@
+// НАВИГАЦИЯ
+.modal-menu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 48px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+// КОНТАКТЫ
+.modal-menu__list {
+}
+
+.modal-menu__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-menu__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+
+  color: #212121;
+}
+
+.modal-menu__contacts {
+}
+.modal-menu__contacts-item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-menu__contacts-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+
+  color: #2196f3;
+}
+
+.modal-menu__contacts-item-mail {
+  margin-bottom: 64px;
+}
+.modal-menu__contacts-link-mail {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+
+  color: #757575;
+}
+
+// СОЦ-СЕТИ
+.menu-socials__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-socials__item {
+  position: relative;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.2);
+    position: absolute;
+    top: 0;
+    right: -10px;
+  }
+}
+.menu-socials__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  color: #2196f3;
+}

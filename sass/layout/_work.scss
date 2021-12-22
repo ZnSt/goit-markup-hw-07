@@ -1,3 +1,14 @@
+.work {
+  padding-bottom: 94px;
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(tablet-only) {
+    display: none;
+  }
+}
+
 .work__title {
   font-family: Roboto;
   font-style: normal;
