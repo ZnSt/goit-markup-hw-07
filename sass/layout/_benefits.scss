@@ -1,7 +1,10 @@
 .peculiarities {
-  // padding-top: 94px;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @include mq(desktop) {
+    padding-top: 94px;
+  }
 }
 .peculiarities-list {
   // display: flex;

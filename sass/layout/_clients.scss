@@ -1,3 +1,13 @@
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .client__title {
   font-weight: 700;
   font-size: 36px;
@@ -5,9 +15,13 @@
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: var(--primary-text-color);
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 
   @include mq(not-desktop) {
     font-weight: bold;

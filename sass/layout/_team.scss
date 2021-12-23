@@ -18,7 +18,11 @@
   letter-spacing: 0.03em;
 
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 
   @include mq(not-desktop) {
     font-style: normal;
@@ -58,7 +62,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  margin-bottom: 30px;
+  margin-top: 30px;
 
   // &:last-child {
   //   margin-bottom: 0;
@@ -71,6 +75,7 @@
 
   @include mq(desktop) {
     margin-right: 30px;
+    margin-bottom: 0;
 
     &:last-child {
       margin-right: 0;
